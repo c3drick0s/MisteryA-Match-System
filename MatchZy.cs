@@ -14,7 +14,7 @@ namespace MatchZy
 
         public override string ModuleName => "MisteryA Match System";
 
-        public override string ModuleVersion => "0.8.15";
+        public override string ModuleVersion => "0.0.1";
 
         public override string ModuleAuthor => "c3drick0s (https://github.com/c3drick0s/)";
 
