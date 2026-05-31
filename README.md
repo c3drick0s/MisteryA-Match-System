@@ -1,59 +1,56 @@
-MatchZy - Match Plugin for CS2!
-==============
+# MisteryA Match System (MMS)
 
-MatchZy is a plugin for CS2 (Counter Strike 2) for running and managing practice/pugs/scrims/matches with easy configuration!
+Fork de [MatchZy](https://github.com/shobhit-pathak/MatchZy) adapté pour MisteryA Esport.
 
-[![Discord](https://discordapp.com/api/guilds/1169549878490304574/widget.png?style=banner2)](https://discord.gg/2zvhy9m7qg)
+MMS est un plugin CS2 (CounterStrikeSharp) pour gérer les pratiques, scrims et matchs compétitifs de MisteryA.
 
-## Feature Highlights:
+## Fonctionnalités
 
-* Pug mode with simple commands to manage!
-* Support of [Get5 Panel!](https://shobhit-pathak.github.io/MatchZy/get5/)
-* Support BO1/BO3/BO5 and Veto when using Match configuration or Get5 Panel!
-* [Setting up matches](https://shobhit-pathak.github.io/MatchZy/match_setup/) and locking players into their team
-* Practice Mode with `.bot`, `.spawn`, `.ctspawn`, `.tspawn`, `.nobots`, `.rethrow`, `.last`, `.timer`, `.clear`, `.exitprac` and many more commands!
-* Knife round (With expected logic, i.e., team with most players win. If same number of players, then team with HP advantage wins. If same HP, winner is decided randomly)
-* Automatically starts demo recording and stop recording when match is ended (Make sure you have tv_enable 1)
-* Automatically uploads demo on map end on the given URL.
-* Players whitelisting (Thanks to [DEAFPS](https://github.com/DEAFPS)!)
-* Coaching system
-* Damage report after every round
-* Support for round restore (Currently using the vanilla valve's backup system)
-* Ability to create admin and allowing them access to admin commands
-* Database Stats and CSV Stats! MatchZy stores data and stats of all the matches in a local SQLite database (MySQL Database is also supported!) and also creates a CSV file for detailed stats of every player in that match!
-* Provides easy configuration
-* And much more!!
+- Mode Practice avec `.bot`, `.spawn`, `.ctspawn`, `.tspawn`, `.nobots`, `.rethrow`, `.last`, `.timer`, `.clear`, `.exitprac` et bien d'autres commandes
+- Support BO1/BO3/BO5 avec système de veto intégré
+- Configuration et verrouillage des joueurs dans leur équipe
+- Round couteau (logique : équipe avec le plus de joueurs gagne ; en cas d'égalité, avantage HP ; sinon aléatoire)
+- Enregistrement automatique des démos (demo recording start/stop)
+- Upload automatique des démos en fin de map sur URL configurée
+- Whitelist joueurs
+- Système de coaching
+- Rapport de dégâts après chaque round
+- Restauration de round (backup système Valve)
+- Système d'administration avec commandes admin
+- Statistiques en base de données SQLite (MySQL supporté) + export CSV
 
+## Branding MisteryA
 
-## Documentation
+- Préfixe chat : `[MMS]` (rouge)
+- Préfixe admin : `[ADMIN]` (gold)
+- Hostname : `MisteryA | {TEAM1} vs {TEAM2}`
 
-## [shobhit-pathak.github.io/MatchZy/](https://shobhit-pathak.github.io/MatchZy/)
+## Différences avec MatchZy upstream
 
-## Donation
+| Fonctionnalité | MatchZy | MMS |
+|---|---|---|
+| Branding | MatchZy / WD- | MisteryA / c3drick0s |
+| Get5 / G5API | ✅ Supporté | ❌ Retiré |
+| Création match panel web | ✅ Supporté | ❌ Retiré |
 
-Buy Me A Coffee:
+## Installation
 
-[!["Buy Me A Coffee"](https://cdn.buymeacoffee.com/buttons/default-blue.png)](https://www.buymeacoffee.com/shobhitwd)
+1. Installer [Metamod](https://www.sourcemm.net/) et [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp)
+2. Télécharger la dernière release depuis [Releases](https://github.com/c3drick0s/MisteryA-Match-System/releases)
+3. Copier `MMS.dll` dans `addons/counterstrikesharp/plugins/MMS/`
 
-Steam Tradelink: 
+## Roadmap
 
-https://steamcommunity.com/tradeoffer/new/?partner=194101533&token=1TI76S3p
+- **MMS Stat v1** — collecte des statistiques en fin de match (Kills, Deaths, ADR, HS%, Clutchs...)
+- **MMS Stat v2** — statistiques avancées (Opening Kills, Trades, Flash Assists, KAST, Impact Score)
+- **MMS Live** — panel web temps réel via WebSocket
+- **MMS Tournament** — projet indépendant (BO3/BO5, brackets, tournois)
 
-## Want CS2 Server with MatchZy?
+## Crédits
 
-Buy it from DatHost (MatchZy can be installed directly on DatHost servers by using their 1-click installer from mods and plugins section!):
-https://dathost.net/r/matchzy 
+- [MatchZy](https://github.com/shobhit-pathak/MatchZy) par WD- — base technique du projet
+- [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp/) par roflmuffin
 
-## License
+## Licence
+
 MIT
-
-## Credits and thanks!
-* [Get5](https://github.com/splewis/get5) - A lot of functionalities and workings have been referred from Get5 and they did an amazing job for managing matches in CS:GO. Huge thanks to them!
-* [G5V](https://github.com/PhlexPlexico/G5V) and [G5API](https://github.com/PhlexPlexico/G5API) - Amazing work with the web panel for managing the servers!
-* [eBot](https://github.com/deStrO/eBot-CSGO) - Amazing job in CS:GO and then provided this great panel again in CS2 which is helping a lot of organizers now. Some logics have been referred from eBot as well!
-* [CounterStrikeSharp](https://github.com/roflmuffin/CounterStrikeSharp/) - Amazing job with development of CSSharp which gave us a platform to build our own plugins and also sparked my interest in plugin development!
-* [AlliedModders and community](https://alliedmods.net/) - They are the reason this whole plugin was possible! They are very helpful and inspire a lot!
-* [LOTGaming](https://lotgaming.xyz/) - Helped me a lot with initial testing and provided servers on different systems and locations!
-* [CHR15cs](https://github.com/CHR15cs) - Helped me a lot with the practice mode!
-* [K4ryuu](https://github.com/K4ryuu) - Awesome job on damage report!
-* [DEAFPS](https://github.com/DEAFPS) - Great contribution for Practice mode!

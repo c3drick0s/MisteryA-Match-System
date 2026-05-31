@@ -12,16 +12,16 @@ namespace MatchZy
     public partial class MatchZy : BasePlugin
     {
 
-        public override string ModuleName => "MatchZy";
+        public override string ModuleName => "MisteryA Match System";
 
         public override string ModuleVersion => "0.8.15";
 
-        public override string ModuleAuthor => "WD- (https://github.com/shobhit-pathak/)";
+        public override string ModuleAuthor => "c3drick0s (https://github.com/c3drick0s/)";
 
-        public override string ModuleDescription => "A plugin for running and managing CS2 practice/pugs/scrims/matches!";
+        public override string ModuleDescription => "MisteryA Match System - Plugin de gestion de matchs CS2 (prac;scrim;pug;matches par MisteryA Servers";
 
-        public string chatPrefix = $"[{ChatColors.Green}MatchZy{ChatColors.Default}]";
-        public string adminChatPrefix = $"[{ChatColors.Red}ADMIN{ChatColors.Default}]";
+        public string chatPrefix = $"[{ChatColors.Red}MMS{ChatColors.Default}]";
+        public string adminChatPrefix = $"[{ChatColors.Gold}ADMIN{ChatColors.Default}]";
 
         // Plugin start phase data
         public bool isPractice = false;
@@ -542,7 +542,7 @@ namespace MatchZy
             RegisterEventHandler<EventMolotovDetonate>(EventMolotovDetonateHandler);
             RegisterEventHandler<EventDecoyStarted>(EventDecoyDetonateHandler);
 
-            Console.WriteLine($"[{ModuleName} {ModuleVersion} LOADED] MatchZy by WD- (https://github.com/shobhit-pathak/)");
+            Console.WriteLine($"[{ModuleName} {ModuleVersion} LOADED] MisteryA Match System by MisteryA Servers (https://github.com/c3drick0s/)");
         }
     }
 }
