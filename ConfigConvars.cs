@@ -17,9 +17,9 @@ namespace MatchZy
 
         public FakeConVar<bool> everyoneIsAdmin = new("matchzy_everyone_is_admin", "If set to true, all the players will have admin privilege. Default: false", false);
 
-        public FakeConVar<bool> showCreditsOnMatchStart = new("matchzy_show_credits_on_match_start", "Whether to show 'MatchZy Plugin by WD-' message on match start. Default: true", true);
+        public FakeConVar<bool> showCreditsOnMatchStart = new("matchzy_show_credits_on_match_start", "Whether to show 'Match System by MisteryA' message on match start. Default: true", true);
 
-        public FakeConVar<string> hostnameFormat = new("matchzy_hostname_format", "The server hostname to use. Set to \"\" to disable/use existing. Default: MatchZy | {TEAM1} vs {TEAM2}", "MatchZy | {TEAM1} vs {TEAM2}");
+        public FakeConVar<string> hostnameFormat = new("matchzy_hostname_format", "The server hostname to use. Set to \"\" to disable/use existing. Default: MisteryA | {TEAM1} vs {TEAM2}", "MisteryA | {TEAM1} vs {TEAM2}");
 
         public FakeConVar<bool> enableDamageReport = new("matchzy_enable_damage_report", "Whether to show damage report after each round or not. Default: true", true);
 
@@ -178,7 +178,7 @@ namespace MatchZy
             pauseAfterRoundRestore = ParseBoolSetting(args, pauseAfterRoundRestore);
         }
 
-        [ConsoleCommand("matchzy_chat_prefix", "Default value of chat prefix for MatchZy messages. Default value: [{Green}MatchZy{Default}]")]
+        [ConsoleCommand("matchzy_chat_prefix", "Default value of chat prefix for MMS messages. Default value: [{Red}MMS{Default}]")]
         public void MatchZyChatPrefix(CCSPlayerController? player, CommandInfo command)
         {
             if (player != null) return;
@@ -187,7 +187,7 @@ namespace MatchZy
 
             if (string.IsNullOrEmpty(args))
             {
-                chatPrefix = $"[{ChatColors.Green}MatchZy{ChatColors.Default}]";
+                chatPrefix = $"[{ChatColors.Red}MMS{ChatColors.Default}]";
                 return;
             }
 
@@ -198,7 +198,7 @@ namespace MatchZy
             Log($"[MatchZyChatPrefix] chatPrefix: {chatPrefix}");
         }
 
-        [ConsoleCommand("matchzy_admin_chat_prefix", "Chat prefix to show whenever an admin sends message using .asay <message>. Default value: [{Green}MatchZy{Default}]")]
+        [ConsoleCommand("matchzy_admin_chat_prefix", "Chat prefix to show whenever an admin sends message using .asay <message>. Default value: [{Gold}ADMIN{Default}]")]
         public void MatchZyAdminChatPrefix(CCSPlayerController? player, CommandInfo command)
         {
             if (player != null) return;
@@ -207,7 +207,7 @@ namespace MatchZy
 
             if (string.IsNullOrEmpty(args))
             {
-                adminChatPrefix = $"[{ChatColors.Red}ADMIN{ChatColors.Default}]";
+                adminChatPrefix = $"[{ChatColors.Gold}ADMIN{ChatColors.Default}]";
                 return;
             }
 

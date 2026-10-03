@@ -668,7 +668,7 @@ namespace MatchZy
 
             if (matchStarted)
             {
-                // ReplyToUserCommand(player, "MatchZy is already in match mode!");
+                // ReplyToUserCommand(player, "MMS is already in match mode!");
                 ReplyToUserCommand(player, Localizer["matchzy.cc.match"]);
                 return;
             }
@@ -687,7 +687,7 @@ namespace MatchZy
 
             if (matchStarted)
             {
-                //ReplyToUserCommand(player, "MatchZy is already in match mode!");
+                //ReplyToUserCommand(player, "MMS is already in match mode!");
                 ReplyToUserCommand(player, Localizer["matchzy.cc.exitprac"]);
                 return;
             }
