@@ -43,7 +43,7 @@ namespace MatchZy
             HandleTeamNameChangeCommand(player, command.ArgString, 2);
         }
 
-        [ConsoleCommand("matchzy_loadmatch", "Loads a match from the given JSON file path (relative to the csgo/ directory)")]
+        // MMS-DISABLED: [ConsoleCommand("matchzy_loadmatch", "Loads a match from the given JSON file path (relative to the csgo/ directory)")]
         public void LoadMatch(CCSPlayerController? player, CommandInfo command)
         {
             try
@@ -82,8 +82,8 @@ namespace MatchZy
             }
         }
 
-        [ConsoleCommand("get5_loadmatch_url", "Loads a match from the given URL")]
-        [ConsoleCommand("matchzy_loadmatch_url", "Loads a match from the given URL")]
+        // MMS-DISABLED: [ConsoleCommand("get5_loadmatch_url", "Loads a match from the given URL")]
+        // MMS-DISABLED: [ConsoleCommand("matchzy_loadmatch_url", "Loads a match from the given URL")]
         public void LoadMatchFromURL(CCSPlayerController? player, CommandInfo command)
         {
             if (player != null) return;

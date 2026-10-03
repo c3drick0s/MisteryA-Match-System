@@ -93,7 +93,7 @@ namespace MatchZy
 
     public partial class MatchZy
     {
-        [ConsoleCommand("get5_status", "Returns get5 status")]
+        // MMS-DISABLED: [ConsoleCommand("get5_status", "Returns get5 status")]
         public void Get5StatusCommand(CCSPlayerController? player, CommandInfo command)
         {
             // TODO: Add remaining Get5 status data as specified in https://splewis.github.io/get5/latest/commands/#get5_status
@@ -157,7 +157,7 @@ namespace MatchZy
             };
         }
 
-        [ConsoleCommand("get5_web_available", "Returns get5 web available")]
+        // MMS-DISABLED: [ConsoleCommand("get5_web_available", "Returns get5 web available")]
         public void Get5WebAvailable(CCSPlayerController? player, CommandInfo command)
         {
             command.ReplyToCommand(JsonSerializer.Serialize(new G5WebAvailable { GameState = (int) getGet5Gamestate() }));

@@ -658,8 +658,8 @@ namespace MatchZy
             RestoreRoundBackup(player, fileName);
         }
 
-        [ConsoleCommand("get5_loadbackup_url", "Loads a backup from the given URL")]
-        [ConsoleCommand("matchzy_loadbackup_url", "Loads a backup from the given URL")]
+        // MMS-DISABLED: [ConsoleCommand("get5_loadbackup_url", "Loads a backup from the given URL")]
+        // MMS-DISABLED: [ConsoleCommand("matchzy_loadbackup_url","Loads a backup from the given URL")]
         public void LoadBackupFromURL(CCSPlayerController? player, CommandInfo command)
         {
             if (player != null) return;
